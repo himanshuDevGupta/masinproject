@@ -1,0 +1,376 @@
+{
+	"info": {
+		"_postman_id": "3b066b1a-b0b1-4565-bc85-6bd92ba1ee10",
+		"name": "Masin Project Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27494437",
+		"_collection_link": "https://varun1-7212.postman.co/workspace/716174b6-2104-4a49-a628-4a3846c7aad0/collection/27494437-3b066b1a-b0b1-4565-bc85-6bd92ba1ee10?action=share&source=collection_link&creator=27494437"
+	},
+	"item": [
+		{
+			"name": "{{url}}/api/register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test_test@yopmail.com\",\r\n    \"firstName\":\"Himanshu\",\r\n    \"lastName\":\"GUpta\",\r\n    \"password\":\"Gupta@123\",\r\n    \"role\":\"Admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				},
+				"description": "## Register User Endpoint\n\nThis endpoint allows new users to register for an account. By sending a POST request to the `/api/register` endpoint, users can create their profiles by providing necessary information.\n\n### Request Format\n\nThe request must be sent with a JSON body containing the following parameters:\n\n- **email** (string): The email address of the user. It must be a valid email format.\n    \n- **firstName** (string): The first name of the user.\n    \n- **lastName** (string): The last name of the user.\n    \n- **password** (string): A secure password for the user account. It should meet the security requirements.\n    \n- **role** (string): The role assigned to the user, typically indicating their permission level (e.g., \"User\").\n    \n\n#### Example Request Body\n\n``` json\n{\n  \"email\": \"user@yopmail.com\",\n  \"firstName\": \"Dev\",\n  \"lastName\": \"Gupta\",\n  \"password\": \"Gupta@123\",\n  \"role\": \"User\"\n}\n\n ```\n\n### Response Structure\n\nUpon a successful registration, the API will respond with a status code of `200` and a JSON object containing a message. The response structure is as follows:\n\n- **message** (string): A confirmation message indicating the result of the registration process.\n    \n\n#### Example Response\n\n``` json\n{\n  \"message\": \"\"\n}\n\n ```\n\n### Notes\n\n- Ensure that all required fields are included in the request body.\n    \n- The email provided must be unique and not already associated with an existing account."
+			},
+			"response": [
+				{
+					"name": "{{url}}/api/register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test_test@yopmail.com\",\r\n    \"firstName\":\"Himanshu\",\r\n    \"lastName\":\"GUpta\",\r\n    \"password\":\"Gupta@123\",\r\n    \"role\":\"Admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "62"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3e-gaDd/OuM4JT66FNSJa8nNIYjv/c\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 19 Jun 2025 09:34:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"This email already exists: test_test@yopmail.com\"\n}"
+				}
+			]
+		},
+		{
+			"name": "{{url}}/api/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test_test@yopmail.com\",\r\n    \"password\":\"Gupta@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "{{url}}/api/login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"test_test@yopmail.com\",\r\n    \"password\":\"Gupta@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "415"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"19f-ipX07cYgO21nDx1PEg0SAi0UjFA\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 19 Jun 2025 09:29:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"email\": \"test_test@yopmail.com\",\n        \"firstName\": \"Himanshu\",\n        \"lastName\": \"GUpta\",\n        \"role\": \"Admin\",\n        \"createdDate\": \"2025-06-19T08:46:33.780Z\",\n        \"id\": \"6853ce69bd535c4f1009b8af\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODUzY2U2OWJkNTM1YzRmMTAwOWI4YWYiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3NTAzMjUzNTMsImV4cCI6MTc1MDkzMDE1M30.eYfavIOkNA9-Rg_y_Dvcw5HeRgM9_fpKmozqUOYNENw\"\n    },\n    \"message\": \"User logged in successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "{{url}}/api/profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODUzY2U2OWJkNTM1YzRmMTAwOWI4YWYiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3NTAzMjMxNTgsImV4cCI6MTc1MDkyNzk1OH0.fFHhFWyCFOGTr18wM7v_AmBemiffeS9Z7BAZZFAV2Ck",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/profile",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "{{url}}/api/profile",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/profile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "163"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a3-qRyHuqqGLLi43zOBr/NUdl+EI7Y\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 19 Jun 2025 09:33:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"test_test@yopmail.com\",\n    \"firstName\": \"Himanshu\",\n    \"lastName\": \"GUpta\",\n    \"role\": \"Admin\",\n    \"createdDate\": \"2025-06-19T08:46:33.780Z\",\n    \"id\": \"6853ce69bd535c4f1009b8af\"\n}"
+				}
+			]
+		},
+		{
+			"name": "{{url}}/api/admin/users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2ODUzY2U2OWJkNTM1YzRmMTAwOWI4YWYiLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE3NTAzMjMxNTgsImV4cCI6MTc1MDkyNzk1OH0.fFHhFWyCFOGTr18wM7v_AmBemiffeS9Z7BAZZFAV2Ck",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/admin/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "{{url}}/api/admin/users",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/admin/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"admin",
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "154"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9a-M4MDIo+eqBXmsRXY80qVZzGbpWs\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 19 Jun 2025 09:38:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"email\": \"user@yopmail.com\",\n        \"firstName\": \"Dev\",\n        \"lastName\": \"GUpta\",\n        \"role\": \"User\",\n        \"createdDate\": \"2025-06-19T09:37:57.497Z\",\n        \"id\": \"6853da75c8163a146426e3d5\"\n    }\n]"
+				}
+			]
+		}
+	]
+}

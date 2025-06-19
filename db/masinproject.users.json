@@ -1,0 +1,28 @@
+[{
+  "_id": {
+    "$oid": "6853ce69bd535c4f1009b8af"
+  },
+  "email": "test_test@yopmail.com",
+  "firstName": "Himanshu",
+  "lastName": "GUpta",
+  "password": "$2a$10$WzYFivxPe9lYAnsinq9aFuQ.aKHPkRIbKGoWoGFKJGaFPt6SjlwFO",
+  "role": "Admin",
+  "createdDate": {
+    "$date": "2025-06-19T08:46:33.780Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853da75c8163a146426e3d5"
+  },
+  "email": "user@yopmail.com",
+  "firstName": "Dev",
+  "lastName": "GUpta",
+  "password": "$2a$10$UHQ1wWqU00LrTeoHFf5/hux5nN/m4zEsG/0.zjRfYTgVJWp/6tusm",
+  "role": "User",
+  "createdDate": {
+    "$date": "2025-06-19T09:37:57.497Z"
+  },
+  "__v": 0
+}]
